@@ -1,0 +1,297 @@
+/* 
+          _           _ 
+         | |         (_)
+       __| | ___  ___ _ 
+      / _` |/ _ \/ __| |
+     | (_| |  __/\__ \ |
+      \__,_|\___||___/_|
+                        
+                        
+          _         
+         | |        
+         | | ____ _ 
+         | |/ / _` |
+         |   < (_| |
+         |_|\_\__,_|
+*/
+
+
+/*
+ * Body resets
+ * Custom type
+ * Messages
+ * Container
+ * Masthead
+
+ * Contents
+ * Global resets
+ * Sidebar
+ * Container
+ */
+
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+}
+
+  
+:root {
+--body-bg: #fafafa;
+--body-color: #7a7a7a;
+--body-font-weight: 400;
+--link-color: #fff;
+--link-color-hover: #fff;
+--heading-color: #333;
+--hr-color: rgba(0,0,0,.1);
+
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+:root {
+--body-bg: #212529;
+--body-color: #6c757d;
+--body-font-weight: 300;
+--link-color: #dee2e6;
+--link-color-hover: #fff;
+--heading-color: #fff;
+--whoami-color: #727272;
+--hr-color: rgba(255,255,255,.1);
+}
+} */
+
+
+
+html { 
+font-size: 16px;
+margin: 0;
+scroll-behavior: smooth;
+}
+@media (min-width: 30em) {
+html { 
+font-size: 18px; 
+scroll-behavior: smooth;
+
+}
+}
+  
+body {
+margin: 0;
+padding: 1.5rem;
+font: var(--body-font-weight) 1rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+color: var(--body-color);
+background-color: var(--body-bg);
+}
+@media (min-width: 500px) {
+body {
+padding: 0rem;
+}
+}
+
+a {
+color: var(--link-color);
+text-decoration: none;
+transition: color .2s ease-in-out;
+}
+a:hover {
+color: var(--link-color-hover);
+text-decoration: underline;
+text-decoration-skip-ink: auto;
+}
+h1, h2, h3 {
+margin-top: 0;
+font-weight: 500;
+}
+h1 {
+margin-bottom: .5rem;
+font-size: 2.25rem;
+line-height: 1;
+}
+h1 a {
+color: var(--heading-color);
+}
+h1 span {
+display: inline-block;
+font-weight: 300;
+}
+h2 {
+margin-bottom: 1rem;
+font-size: 1rem;
+color: var(--body-color);;
+}
+h3 {
+margin-bottom: 0;
+font-size: 1.25rem;
+}
+p {
+margin-top: 0;
+margin-bottom: 1rem;
+color: white;
+font-size: 0.7rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 1rem;
+
+}
+
+
+
+/* Overall Flex Container */
+.flex-container {
+display: flex;
+flex-direction: row;
+font-size: 1.5rem;
+height: 100vh;
+}
+
+/* Content in the sidebar */
+
+.flex-item-left {
+    
+border: 0.3rem solid white;    
+background-color: #E04926ff;
+flex: 30%;
+display: flex;
+flex-direction: column;
+}
+
+.logo-container{
+position: relative;   
+top: 0;
+background-color: white;
+}
+
+img{
+position: relative;
+object-fit: scale-down;
+width: 100%;
+height: 100%;
+
+}
+
+
+.sidebar-nav{
+    position: absolute;
+    padding-left: 0;
+    bottom: 0rem;
+    left:   0rem;
+    text-align: left;
+    order: 1;
+}
+
+.topnav {
+    display: none;
+  }
+  
+
+/* Content in the slides */
+
+.flex-item-right {
+background-color: #5476BAff;
+flex: 70%;
+color: white;
+order: 2;
+
+}
+
+.slider-xy {
+height: 100%;
+overflow-x: scroll;
+scroll-snap-type: both mandatory;
+
+}
+
+section {
+width: 100%;	
+height: 100%;
+scroll-snap-align: start;
+text-align: center;
+padding-top: 50%;
+position: relative;
+overflow: scroll;
+}
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 1000px) {
+.flex-container {
+flex-direction: column;
+}   
+
+
+.sidebar-nav{   
+display: none;
+
+}
+
+
+section{
+border: 1px solid white;
+min-width: 100%;
+height: 80vh;
+scroll-snap-align: start;
+text-align: center;
+position: relative;
+overflow: scroll;
+}
+
+.topnav {
+background-color: #333;
+position: relative;
+margin-top: 0;
+display: unset;
+text-align: right;
+font-size: 1.2em;
+}
+
+.topnav a {
+color: white;
+padding: 0.2em;
+text-decoration: none;
+display: block;
+max-width: 99vw;
+border-width: thin;
+border-color: green;
+
+}
+
+.topnav #myLinks {
+display: none;
+}
+
+.topnav a.icon {
+background-color: #E04926ff;
+position: relative;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+
+}
+
+
+ 
+  /* Color Swatch
+   *
+   *
+  
+   
+  --selective-yellow: #F5B517ff;
+  --spanish-gray: #939598ff;
+  --blue-yonder: #5476BAff;
+  --desert-sand: #E4BEB1ff;
+  --selective-yellow-2: #F5B517ff;
+  --vermilion: #E04926ff;
+  --mint: #4FB293ff;
+  
+  * CSS HEX */

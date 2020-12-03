@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="css/desika-studio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="flex-item-left">
+    <div class="logo-container">
+        <img src="images/logo.png">
+    </div>  
+    <div class="sidebar-nav">
+    <ul>
+        
+        <li><a href="#home" class="sidebar-nav-item">HOME</a></li>  
+        <li><a href="#services" class="sidebar-nav-item">SERVICES</a></li>
+        <li><a href="#projects" class="sidebar-nav-item">PROJECTS</a></li>
+        <li><a href="#blog" class="sidebar-nav-item">BLOG</a></li>
+        <li><a href="#contact" class="sidebar-nav-item">CONTACT</a></li>
+        <br>
+        <p>&copy; 2020 DESIKA STUDIOS</p>
+        
+    </ul>
+
+
+        
+    </div>
+    
+  
+
+  <!-- Top Navigation Menu for Mobile  -->
+  <div class="topnav">  
+    
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    <div id="myLinks">
+        <a href="#home" class="sidebar-nav-item">HOME</a> 
+        <a href="#services" class="sidebar-nav-item">SERVICES</a>
+        <a href="#projects" class="sidebar-nav-item">PROJECTS</a>
+        <a href="#blog" class="sidebar-nav-item">BLOG</a>
+        <a href="#contact" class="sidebar-nav-item">CONTACT</a>
+    </div>   
+
+  </div>
+</div>
+  <div class="flex-item-right">
+    <div class="slider-xy">
+        <section id="home">
+            <h1>HOME</h1>
+        </section>
+        <section id="services">
+            <h1>SERVICES</h1>
+        </section>
+        <section id="projects">
+            <h1>PROJECTS</h1>
+        </section>
+        <section id="blog">
+            <h1>BLOG</h1>
+        </section>
+        <section id="contact">
+            <h1>CONTACT</h1>
+        </section>
+    </div> 
+  </div>
+</div>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
+
+</body>
+</html>
