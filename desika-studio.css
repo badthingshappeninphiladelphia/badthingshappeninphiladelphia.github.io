@@ -38,6 +38,7 @@ scroll-behavior: smooth;
 -webkit-overflow-scrolling: touch;
 }
 
+
   
 :root {
 --body-bg: #fafafa;
@@ -205,7 +206,14 @@ order: 2;
 height: 100%;
 overflow-x: scroll;
 scroll-snap-type: both mandatory;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
 
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider-xy::-webkit-scrollbar {
+  display: none;
 }
 
 section {
